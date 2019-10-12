@@ -15,7 +15,9 @@ RUN apt-get install unzip -y
 
 # Copy the static website to Apache deployment directory(/var/www/html)
 WORKDIR /var/www/html
-RUN wget 
+RUN wget https://github.com/sreecherry2123/FinalProject1/archive/master.zip
+RUN unzip master.zip
+RUN cp 
 
 ADD demo-app .
 
