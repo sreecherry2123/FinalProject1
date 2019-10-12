@@ -15,6 +15,7 @@ RUN apt-get install unzip -y
 
 # Copy the static website to Apache deployment directory(/var/www/html)
 WORKDIR /var/www/html
+RUN wget 
 
 ADD demo-app .
 
