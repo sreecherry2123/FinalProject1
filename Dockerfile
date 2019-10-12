@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-LABEL company="Java Home Cloud" \
-      maintainer="Hari" \
+LABEL company="minds" \
+      maintainer="Charishma" \
       Location="Banglore" \
       Version="0.0.1"
 
