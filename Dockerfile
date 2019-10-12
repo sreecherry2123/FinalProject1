@@ -12,15 +12,15 @@ RUN apt-get install apache2 -y
 #My Added Code
 RUN apt-get install wget -y
 RUN apt-get install unzip -y
-
+WORKDIR /tmp
 # Copy the static website to Apache deployment directory(/var/www/html)
-WORKDIR /var/www/html
+#WORKDIR /var/www/html
 RUN wget https://github.com/sreecherry2123/FinalProject1/archive/master.zip
 RUN unzip master.zip
-RUN cp 
+RUN mv -r FinalProject1-master/* /var/www/html
 
-ADD demo-app .
+#ADD demo-app .
 
 EXPOSE 80
 # CMD is runtime instruction, is excuted when we run container
-ENTRYPOINT ["apachectl","-D", "FOREGROUND"]
+CMD ["apachectl","-D", "FOREGROUND"]
